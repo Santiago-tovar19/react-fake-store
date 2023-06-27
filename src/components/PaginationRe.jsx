@@ -23,17 +23,27 @@ export const PaginationRe = () => {
   };
 
   const nextPage = () => {
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: 0,
+    //   left: 0,
+    // });
     dispatch(onNextPage());
   };
 
   const specificPage = (n) => {
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: 0,
+    //   left: 0,
+    // });
     dispatch(onSpecificPage(n));
   };
 
   return (
     <>
       <nav
-        className="pagination is-centered mb-6"
+        className="pagination is-centered mb-6 pgnt"
         role="navigation"
         aria-label="pagination"
       >
@@ -45,7 +55,7 @@ export const PaginationRe = () => {
           anterior
         </button>
         <button
-          className={`pagination-next butn `}
+          className={`pagination-next butn  `}
           disabled={currentPage >= pageNumbers.length ? true : false}
           onClick={nextPage}
         >

@@ -5,11 +5,14 @@ import "./index.css";
 import { FakeStoreApp } from "./FakeStoreApp";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <FakeStoreApp />
+      <BrowserRouter>
+        <FakeStoreApp />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
